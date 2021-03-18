@@ -44,6 +44,8 @@ const kg = [
   { id: '安全', neighbors: [] },
 ];
 window.onload = () => {
+  const descContainerEl = document.querySelector('#desc-container');
+
   const graph = Viva.Graph.graph();
 
   const graphics = Viva.Graph.View.svgGraphics();
@@ -58,6 +60,14 @@ window.onload = () => {
       circle = Viva.Graph.svg('circle').attr('r', 5).attr('fill', '#00a2e8'),
       svgText = Viva.Graph.svg('text').attr('y', '-6px').text(node.id);
 
+    ui.addEventListener('click', () => {
+      descContainerEl.innerHTML = node.data ? `
+        <div id="desc">
+          <h4>${node.id}</h4>
+          <p>${node.data}</p>
+        </div>
+        `: '';
+    });
     ui.append(circle);
     ui.append(svgText);
     return ui;
