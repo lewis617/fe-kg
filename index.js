@@ -33,15 +33,15 @@ const kg = [
   { id: '精度', neighbors: [], data: '表现：0.1+0.2!==0.3 \n解法：变成整数相加再除回去' },
   { id: '优先级', neighbors: [], data: '属性赋值最高，连等操作，从右往左' },
 
-  { id: '框架', neighbors: ['React', 'Koa', 'Express', 'Babel', 'Webpack'] },
-  { id: 'React', neighbors: ['DIFF 算法', '虚拟 DOM', 'React16', '表单'] },
-  { id: 'DIFF 算法', neighbors: ['树', 'key', 'class'], data: '算法策略：1、树：同层比较。2、层：通过 key 减少增删。3、节点：同类比较。\n算法复杂度：n^3 降到 n。' },
+  { id: '框架', neighbors: ['react', 'babel', 'webpack'] },
+  { id: 'react', neighbors: ['DIFF', '虚拟 DOM', 'react16', '表单'] },
+  { id: 'DIFF', neighbors: ['树', 'key', 'class'], data: '算法策略：1、树：同层比较。2、层：通过 key 减少增删。3、节点：同类比较。\n算法复杂度：n^3 降到 n。' },
   { id: '虚拟 DOM', neighbors: ['重排', '跨平台', 'DOM 操作'], data: '优点：1、减少重排。2、避免 DOM 操作。3、跨平台。\n缺点：无法极致优化。' },
-  { id: 'React16', neighbors: ['Hooks', 'Fiber', 'Portal', 'Fragment'] },
+  { id: 'react16', neighbors: ['Hooks', 'Fiber', 'Portal', 'Fragment'] },
   { id: 'Hooks', neighbors: ['链表'], data: '1、顺序存到链表中，所以 hooks 不能放到循环和条件块中。2、链表相比数组擅长增删。' },
-  { id: 'Fiber', neighbors: ['卡顿', '异步', 'DIFF 算法'], data: 'what：核心算法的重新实现。why：同步 diff 算法带来的卡顿问题。how：改为异步、设置优先级' },
+  { id: 'Fiber', neighbors: ['卡顿', '异步', 'DIFF'], data: 'what：核心算法的重新实现。why：同步 diff带来的卡顿问题。how：改为异步、设置优先级' },
   { id: '表单', neighbors: ['受控组件', '非受控组件'], },
-  { id: 'Babel', neighbors: ['AST'], },
+  { id: 'babel', neighbors: ['AST'], },
 
   { id: 'CSS', neighbors: ['兼容性', '响应式', 'CSS 属性', 'CSS 画图', '布局', 'CSS3 动画'] },
   { id: '兼容性', neighbors: ['CSS 初始化', 'CSS 私有属性', 'CSS Hack'] },
@@ -49,7 +49,7 @@ const kg = [
   { id: 'CSS 私有属性', neighbors: ['Autoprefixer'], data: '例如：-webkit-、-moz-' },
   { id: 'CSS Hack', neighbors: [], data: '例如：if endif' },
   { id: '响应式', neighbors: ['媒体查询', '百分比', 'flex', 'rem', '视口单位', 'viewport', 'dpr'] },
-  { id: 'CSS 属性', neighbors: ['display', 'postion', 'visibility', 'float', 'box-sizing', 'viewport', 'white-space', 'word-space', 'letter-space'] },
+  { id: 'CSS 属性', neighbors: ['display', 'postion', 'visibility', 'transform', 'float', 'box-sizing', 'viewport', 'white-space', 'word-space', 'letter-space'] },
   { id: 'BFC', neighbors: ['display', 'postion', 'float', 'overflow', '外边距塌陷', '清除浮动', '多栏布局'] },
   { id: '清除浮动', neighbors: ['clear'] },
   { id: 'clear', neighbors: ['::after'] },
@@ -87,9 +87,9 @@ const kg = [
   { id: '线上监控', neighbors: ['window.performace', '请求动画帧', 'FPS'] },
   { id: '开发调试', neighbors: ['performace 选项卡', 'memory 选项卡', 'lighthouse'] },
   { id: 'lighthouse', neighbors: ['性能报告'] },
-  { id: 'CSS 性能优化', neighbors: ['选择器优化', '重排'] },
-  { id: 'JS 性能优化', neighbors: ['重排'] },
-  { id: '构建优化', neighbors: ['DLL', 'resolve', '多进程', 'tree shaking'] },
+  { id: 'CSS 性能优化', neighbors: ['选择器优化', 'CSS 重排'] },
+  { id: 'JS 性能优化', neighbors: ['JS 重排'] },
+  { id: '构建优化', neighbors: ['DLL', 'resolve', '多进程', 'tree shaking', 'webpack'] },
   { id: '加载优化', neighbors: ['打包', '压缩', '非阻塞', '缓存'] },
   { id: '打包', neighbors: ['多路复用'] },
   { id: '非阻塞', neighbors: ['defer', 'async', '服务器推送'] },
@@ -97,7 +97,7 @@ const kg = [
   { id: 'tree shaking', neighbors: ['ES6 Module'] },
   { id: '选择器优化', neighbors: [], data: '1、避免嵌套。2、避免通配符和属性选择器。3、避免id+class，多此一举' },
   { id: '重排', neighbors: ['CSS 重排', 'JS 重排'] },
-  { id: 'CSS 重排', neighbors: ['transform', 'top', 'visibility', 'display', 'absolute', 'fixed', '动画'] },
+  { id: 'CSS 重排', neighbors: ['transform', 'visibility', '动画'] },
   { id: 'JS 重排', neighbors: ['fragment', 'class', '缓存'] },
 
   { id: '浏览器', neighbors: ['浏览器存储', 'Hybrid', 'BOM', 'DOM', '跨域'] },
@@ -147,7 +147,7 @@ const kg = [
   { id: '非对称加密', neighbors: ['公钥', '私钥', 'HTTPS', 'SSH', 'RSA'] },
   { id: '签名', neighbors: ['MD5', 'SHA1', '加盐', '不可逆', '文件校验', '数字签名', '密码签名', 'JWT'] },
   { id: '编码', neighbors: ['base64', 'JWT'] },
-  { id: '认证', neighbors: ['cookie', 'session', 'JWT', '单点登录'] },
+  { id: '认证', neighbors: ['cookie', 'JWT', '单点登录'] },
   { id: 'session', neighbors: ['状态', '服务器', '数据库', '内存', '分布式'] },
   { id: 'JWT', neighbors: ['状态'] },
   { id: '单点登录', neighbors: ['cookie', '顶级域名', '认证中心'] },
@@ -166,11 +166,32 @@ window.onload = () => {
   }
 
   graphics.node(function (node) {
-    const isRoot = node.id === '前端';
     const ui = Viva.Graph.svg('g').attr('class', 'node-g'),
-      circle = Viva.Graph.svg('circle').attr('r', 5).attr('fill', isRoot ? '#dc3545' : '#00a2e8'),
+      circle = Viva.Graph.svg('circle').attr('r', 5).attr('fill', '#00a2e8'),
       svgText = Viva.Graph.svg('text').attr('y', '-8px').attr('x', '-6px').text(node.id);
 
+    const highlightRelatedNodes = function (nodeId, isOn) {
+      // just enumerate all realted nodes and update link color:
+      graph.forEachLinkedNode(nodeId, function (node, link) {
+        var linkUI = graphics.getLinkUI(link.id);
+        if (linkUI) {
+          // linkUI is a UI object created by graphics below
+          linkUI.attr('stroke', isOn ? 'red' : 'gray');
+        }
+        var nodeUI = graphics.getNodeUI(node.id);
+        if (nodeUI) {
+          // nodeUI is a UI object created by graphics below
+          nodeUI.firstChild.attr('fill', isOn ? 'red' : '#00a2e8');
+          nodeUI.lastChild.attr('fill', isOn ? 'red' : 'black');
+        }
+      });
+    };
+    ui.addEventListener('mouseover', function () { // mouse over
+      highlightRelatedNodes(node.id, true);
+    });
+    ui.addEventListener('mouseout', function () { // mouse out
+      highlightRelatedNodes(node.id, false);
+    });
     ui.addEventListener('click', () => {
       descContainerEl.innerHTML = node.data ? `
       <div id="desc">
@@ -188,9 +209,17 @@ ${node.data}
       nodeUI.attr('transform', `translate(${pos.x}, ${pos.y})`);
     });
 
-  // Render the graph
+
+  // const layout = Viva.Graph.Layout.forceDirected(graph, {
+  //   springLength: 200,
+  //   springCoeff: 0.0005,
+  //   dragCoeff: 0.02,
+  //   gravity: -1.2
+  // });
+
   const renderer = Viva.Graph.View.renderer(graph, {
-    graphics: graphics
+    // layout: layout,
+    graphics
   });
   renderer.run();
 }
