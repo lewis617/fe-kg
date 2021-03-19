@@ -86,6 +86,7 @@ const kg = [
   { id: '性能检测', neighbors: ['线上监控', '开发调试'] },
   { id: '线上监控', neighbors: ['window.performace', 'FPS'] },
   { id: '请求动画帧', neighbors: ['动画', 'FPS', '节流'], data: 'requestAnimationFrame的优势，在于充分利用显示器的刷新机制，比较节省系统资源。' },
+  { id: 'FPS', neighbors: ['卡顿'] },
   { id: '开发调试', neighbors: ['performace 选项卡', 'memory 选项卡', 'lighthouse'] },
   { id: 'lighthouse', neighbors: ['性能报告'] },
   { id: 'CSS 性能优化', neighbors: ['选择器优化', 'CSS 重排'] },
