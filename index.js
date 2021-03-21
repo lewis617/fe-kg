@@ -145,8 +145,9 @@ const kg = [
   { id: 'http-server', neighbors: ['CORS', '代理', 'cert.pem', 'key.pem'] },
 
   { id: '网络', neighbors: ['安全', '应用层', '传输层'] },
-  { id: '应用层', neighbors: ['HTTP'] },
+  { id: '应用层', neighbors: ['HTTP', 'DNS'] },
   { id: '传输层', neighbors: ['TCP', 'UDP'], data: 'TCP 和 UDP 区别：1、连接；2、可靠；3、通信对象个数；4、传输方式（tcp是字节流，udp是报文）；5、头部开销（tcp大）；6、应用（udp快，适合实时应用；tcp可靠，适合文件传输）' },
+  { id: 'UDP', neighbors: ['DNS'], },
   { id: 'HTTP', neighbors: ['状态码', '头', '方法', 'HTTPS', 'HTTP2'] },
   { id: '状态码', neighbors: ['重定向', '成功', '客户端失败', '服务端失败'] },
   { id: '重定向', neighbors: ['301', '302'], data: '301 永久、302 临时' },
