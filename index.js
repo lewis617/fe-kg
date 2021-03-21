@@ -121,7 +121,8 @@ const kg = [
   { id: 'options', neighbors: [], data: '作用：1、获取支持的方法。2、CORS 中预检请求。' },
 
   { id: '服务器', neighbors: ['文件服务器'] },
-  { id: '文件服务器', neighbors: ['content-type', '压缩', '缓存'] },
+  { id: '文件服务器', neighbors: ['content-type', '压缩', '缓存', 'http-server'] },
+  { id: 'http-server', neighbors: ['CORS', '代理', '证书'] },
 
   { id: '网络', neighbors: ['安全', 'HTTP', 'HTTPS', 'HTTP2'] },
   { id: 'HTTP', neighbors: ['状态码', '头', '方法'] },
@@ -141,7 +142,7 @@ const kg = [
   { id: '方法', neighbors: ['get', 'post', 'delete', 'put', 'options'], data: 'get、post 本质是一样的，区别包括：场景、缓存、方法名、数据传输位置' },
   { id: 'get', neighbors: ['缓存'] },
   { id: 'HTTPS', neighbors: ['证书'] },
-  { id: '证书', neighbors: ['CA', 'openssl'] },
+  { id: '证书', neighbors: ['CA', 'openssl', 'cert.pem', 'key.pem'] },
   { id: 'HTTP2', neighbors: ['二进制分帧', '头部压缩', '多路复用', '服务器推送'], data: 'HTTP1 是文本协议，HTTP2是二进制协议，HTTP2 的出现导致很多之前的优化方法都不需要了。' },
 
   { id: '安全', neighbors: ['攻击', '加密', '编码', '签名', '认证'] },
