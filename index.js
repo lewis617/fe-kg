@@ -184,6 +184,7 @@ const kg = [
   { id: '认证', neighbors: ['cookie', 'JWT', '单点登录'] },
   { id: 'session', neighbors: ['状态', '服务器', '数据库', '内存', '分布式'] },
   { id: 'JWT', neighbors: ['状态', 'expires'] },
+  { id: '函数计算', neighbors: ['状态'] },
   { id: '单点登录', neighbors: ['cookie', 'domain', '一级域名', '认证中心'] },
   { id: '认证中心', neighbors: ['Token', '对称加密'] },
 ];
