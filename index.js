@@ -42,7 +42,7 @@ const kg = [
   { id: 'DIFF', neighbors: ['树', 'key', 'class'], data: '算法策略：1、树：同层比较。2、层：通过 key 减少增删。3、节点：同类比较。\n算法复杂度：n^3 降到 n。' },
   { id: '虚拟 DOM', neighbors: ['重排', '跨平台', 'DOM 操作'], data: '优点：1、减少重排。2、避免 DOM 操作。3、跨平台。\n缺点：无法极致优化。' },
   { id: '跨平台', neighbors: ['rax', 'node.js'] },
-  { id: 'rax', neighbors: ['weex', 'JavaScriptCore'] },
+  { id: 'rax', neighbors: ['weex'] },
   { id: 'JS 引擎', neighbors: ['v8', 'JavaScriptCore'] },
   { id: 'JavaScriptCore', neighbors: ['React Native', 'weex'] },
   { id: 'react16', neighbors: ['hooks', 'fiber', 'portal', 'fragment'] },
