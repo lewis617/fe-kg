@@ -121,7 +121,7 @@ const kg = [
   { id: 'options', neighbors: [], data: '作用：1、获取支持的方法。2、CORS 中预检请求。' },
 
   { id: '服务器', neighbors: ['文件服务器'] },
-  { id: '文件服务器', neighbors: ['content-type', '压缩', '缓存'] },
+  { id: '文件服务器', neighbors: ['content-type', '压缩', '缓存', 'CORS'] },
 
   { id: '网络', neighbors: ['安全', 'HTTP', 'HTTPS', 'HTTP2'] },
   { id: 'HTTP', neighbors: ['状态码', '头', '方法'] },
