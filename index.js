@@ -43,13 +43,14 @@ const kg = [
   { id: 'DIFF', neighbors: ['树', 'key', 'class'], data: '算法策略：1、树：同层比较。2、层：通过 key 减少增删。3、节点：同类比较。\n算法复杂度：n^3 降到 n。' },
   { id: '虚拟 DOM', neighbors: ['重排', '跨平台', 'DOM 操作'], data: '优点：1、减少重排。2、避免 DOM 操作。3、跨平台。\n缺点：无法极致优化。' },
   { id: '跨平台', neighbors: ['rax', 'node.js'] },
-  { id: 'rax', neighbors: ['weex', 'JavaScriptCore'] },
+  { id: 'rax', neighbors: ['weex'] },
   { id: 'JS 引擎', neighbors: ['v8', 'JavaScriptCore'] },
   { id: 'JavaScriptCore', neighbors: ['React Native', 'weex'] },
   { id: 'react16', neighbors: ['hooks', 'fiber', 'portal', 'fragment'] },
   { id: 'hooks', neighbors: ['链表'], data: '1、顺序存到链表中，所以 hooks 不能放到循环和条件块中。2、链表相比数组擅长增删。' },
   { id: 'fiber', neighbors: ['卡顿', '异步', 'DIFF'], data: 'what：核心算法的重新实现。why：同步 diff带来的卡顿问题。how：改为异步、设置优先级' },
   { id: '表单', neighbors: ['受控组件', '非受控组件'], },
+  { id: '受控组件', neighbors: ['defaultValue'], },
   { id: 'babel', neighbors: ['AST'], },
 
   { id: 'CSS', neighbors: ['兼容性', '响应式', 'CSS 属性', 'CSS 画图', '布局', 'CSS3 动画', 'less'] },
@@ -136,6 +137,8 @@ const kg = [
   { id: 'CORS', neighbors: ['access-control-allow-origin', 'options'] },
   { id: 'options', neighbors: [], data: '作用：1、获取支持的方法。2、CORS 中预检请求。' },
 
+  { id: '服务器', neighbors: ['文件服务器'] },
+  { id: '文件服务器', neighbors: ['content-type', '压缩', '缓存', 'CORS'] },
   { id: '移动端', neighbors: ['React Native', 'weex', 'Hybrid'] },
 
   { id: '服务器', neighbors: ['文件服务器', '进程', '线程', '内存'] },
@@ -184,6 +187,7 @@ const kg = [
   { id: '认证', neighbors: ['cookie', 'JWT', '单点登录'] },
   { id: 'session', neighbors: ['状态', '服务器', '数据库', '内存', '分布式'] },
   { id: 'JWT', neighbors: ['状态', 'expires'] },
+  { id: '函数计算', neighbors: ['状态'] },
   { id: '单点登录', neighbors: ['cookie', 'domain', '一级域名', '认证中心'] },
   { id: '认证中心', neighbors: ['Token', '对称加密'] },
 ];
