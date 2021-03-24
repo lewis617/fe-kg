@@ -49,6 +49,7 @@ const kg = [
   { id: 'hooks', neighbors: ['链表'], data: '1、顺序存到链表中，所以 hooks 不能放到循环和条件块中。2、链表相比数组擅长增删。' },
   { id: 'fiber', neighbors: ['卡顿', '异步', 'DIFF'], data: 'what：核心算法的重新实现。why：同步 diff带来的卡顿问题。how：改为异步、设置优先级' },
   { id: '表单', neighbors: ['受控组件', '非受控组件'], },
+  { id: '受控组件', neighbors: ['defaultValue'], },
   { id: 'babel', neighbors: ['AST'], },
 
   { id: 'CSS', neighbors: ['兼容性', '响应式', 'CSS 属性', 'CSS 画图', '布局', 'CSS3 动画', 'less'] },
