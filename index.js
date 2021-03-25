@@ -119,6 +119,8 @@ const kg = [
   { id: '懒加载', neighbors: ['offsetTop', 'clientHeight', 'scrollTop', 'IntersectionObserver'] },
   { id: '打包', neighbors: ['多路复用'] },
   { id: '非阻塞', neighbors: ['defer', 'async', '服务器推送'] },
+  { id: '缓存', neighbors: ['强缓存', '协商缓存', 'service worker'] },
+  { id: '白屏', neighbors: ['非阻塞', '缓存', 'SSR', '骨架屏'] },
   { id: 'defer', neighbors: [], data: 'DOM 加载完后才执行' },
   { id: '缓存', neighbors: ['强缓存', '协商缓存'] },
   { id: 'tree shaking', neighbors: ['ES Module'] },
