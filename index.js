@@ -94,7 +94,7 @@ const kg = [
 
   { id: '计算机科学', neighbors: ['数据结构与算法', '网络'] },
   { id: '数据结构与算法', neighbors: ['数据结构', '算法'] },
-  { id: '数据结构', neighbors: ['栈', '队列', '链表', '树', '二叉树', '图'] },
+  { id: '数据结构', neighbors: ['栈', '队列', '集合', '字典', '链表', '树', '二叉树', '图'] },
   { id: '栈', neighbors: ['括号', '文件路径', '进制转换'] },
   { id: '算法', neighbors: ['排序', '搜索', '分治', '动态规划', '回溯', '贪心'] },
   { id: '贪心', neighbors: ['发饼干'] },
@@ -121,7 +121,7 @@ const kg = [
   { id: '懒加载', neighbors: ['offsetTop', 'clientHeight', 'scrollTop', 'IntersectionObserver'] },
   { id: '打包', neighbors: ['多路复用'] },
   { id: '非阻塞', neighbors: ['defer', 'async', '服务器推送'] },
-  { id: '缓存', neighbors: ['HTTP 缓存', 'service worker', 'Map'] },
+  { id: '缓存', neighbors: ['HTTP 缓存', 'service worker', '字典'] },
   { id: 'HTTP 缓存', neighbors: ['强缓存', '协商缓存'] },
   { id: 'defer', neighbors: [], data: 'DOM 加载完后才执行' },
   { id: 'tree shaking', neighbors: ['ES Module'] },
