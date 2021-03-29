@@ -17,6 +17,7 @@ const kg = [
   { id: 'ES6 继承', neighbors: ['class', 'super', 'extends'] },
   { id: 'super', neighbors: ['构造函数', '静态方法'] },
   { id: 'class', neighbors: ['严格模式', '常量', 'new', '变量提升'] },
+  { id: 'private', neighbors: ['Symbol', '闭包'] },
   { id: '严格模式', neighbors: [], data: '引用一个未声明的变量会报错' },
   { id: 'new', neighbors: ['prototype', 'this', '实例'] },
   { id: '原型链', neighbors: ['proto', 'prototype', '链表'] },
