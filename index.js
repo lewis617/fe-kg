@@ -2,7 +2,7 @@ const kg = [
   { id: '前端', neighbors: ['语言', '端', '计算机科学', '性能'] },
   { id: '语言', neighbors: ['JS', 'CSS', 'HTML'] },
   { id: '端', neighbors: ['浏览器', '服务器', '移动端'] },
-  { id: 'JS', neighbors: ['语法', '框架', 'JS 优化'] },
+  { id: 'JS', neighbors: ['语法', '框架'] },
 
   { id: 'HTML', neighbors: ['a'] },
   { id: 'a', neighbors: ['_blank', '_self', '_parent', '_top'] },
