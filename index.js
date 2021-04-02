@@ -2,7 +2,7 @@ const kg = [
   { id: '前端', neighbors: ['语言', '端', '计算机科学', '性能'] },
   { id: '语言', neighbors: ['JS', 'CSS', 'HTML'] },
   { id: '端', neighbors: ['浏览器', '服务器', '移动端'] },
-  { id: 'JS', neighbors: ['语法', '框架'] },
+  { id: 'JS', neighbors: ['语法', '框架', 'JS 性能优化'] },
 
   { id: 'HTML', neighbors: ['a'] },
   { id: 'a', neighbors: ['_blank', '_self', '_parent', '_top'] },
@@ -59,7 +59,7 @@ const kg = [
   { id: '受控组件', neighbors: ['defaultValue'], },
   { id: 'babel', neighbors: ['AST'], },
 
-  { id: 'CSS', neighbors: ['兼容性', '响应式', 'CSS 属性', 'CSS 画图', '布局', 'CSS3', 'less', 'CSS 优化'] },
+  { id: 'CSS', neighbors: ['兼容性', '响应式', 'CSS 属性', 'CSS 画图', '布局', 'CSS3', 'less', 'CSS 性能优化'] },
   { id: 'less', neighbors: ['嵌套', '变量', '混入', '运算', '函数'] },
   { id: '兼容性', neighbors: ['CSS 初始化', 'CSS 私有属性', 'CSS Hack'] },
   { id: 'CSS 初始化', neighbors: [], data: '例如：normalize.css' },
