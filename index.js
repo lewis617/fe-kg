@@ -187,8 +187,8 @@ const kg = [
   { id: 'cookie', neighbors: ['sessionid', 'session', 'expires', 'domain', 'path', 'httpOnly', 'secure'] },
   { id: '方法', neighbors: ['get', 'post', 'delete', 'put', 'options'], data: 'get、post 本质是一样的，区别包括：场景、缓存、方法名、数据传输位置' },
   { id: 'get', neighbors: ['缓存'] },
-  { id: 'HTTPS', neighbors: ['证书'] },
-  { id: '证书', neighbors: ['CA', 'openssl', 'cert.pem'] },
+  { id: 'HTTPS', neighbors: ['证书'], data: 'https 中的非对称加密只是为了让服务端知道密码，对称加密才是真正用来加密传输内容的' },
+  { id: '证书', neighbors: ['CA', 'openssl', 'cert.pem'], data: 'SSL证书可以向CA机构通过付费的方式申请，也可以自己制作。' },
   { id: 'HTTP2', neighbors: ['二进制分帧', '头部压缩', '多路复用', '服务器推送'], data: 'HTTP1 是文本协议，HTTP2是二进制协议，HTTP2 的出现导致很多之前的优化方法都不需要了。' },
 
   { id: '安全', neighbors: ['攻击', '加密', '编码', '签名', '认证'] },
