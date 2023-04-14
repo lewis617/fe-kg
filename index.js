@@ -189,7 +189,7 @@ const kg = [
   { id: 'get', neighbors: ['缓存'] },
   { id: 'HTTPS', neighbors: ['证书'], data: 'https 中的非对称加密只是为了让服务端知道密码，对称加密才是真正用来加密传输内容的' },
   { id: '证书', neighbors: ['CA', 'openssl', 'cert.pem'], data: 'SSL证书可以向CA机构通过付费的方式申请，也可以自己制作。' },
-  { id: 'HTTP2', neighbors: ['二进制分帧', '头部压缩', '多路复用', '服务器推送'], data: 'HTTP1 是文本协议，HTTP2是二进制协议，HTTP2 的出现导致很多之前的优化方法都不需要了。' },
+  { id: 'HTTP2', neighbors: ['二进制', '头部压缩', '多路复用', '服务器推送'], data: 'HTTP1 是文本协议，HTTP2是二进制协议，HTTP2 的出现导致很多之前的优化方法都不需要了：合并文件、雪碧图被多路复用干掉了，内联资源被服务器推送干掉了' },
 
   { id: '安全', neighbors: ['攻击', '加密', '编码', '签名', '认证'] },
   { id: '攻击', neighbors: ['CSRF', 'XSS'] },
