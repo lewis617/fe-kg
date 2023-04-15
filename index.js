@@ -171,6 +171,7 @@ const kg = [
   { id: '应用层', neighbors: ['HTTP', 'DNS'] },
   { id: '传输层', neighbors: ['TCP', 'UDP'], data: 'TCP 和 UDP 区别：1、连接；2、可靠；3、通信对象个数；4、传输方式（tcp是字节流，udp是报文）；5、头部开销（tcp大）；6、应用（udp快，适合实时应用；tcp可靠，适合文件传输）' },
   { id: 'UDP', neighbors: ['DNS'], },
+  { id: 'TCP', neighbors: ['三次握手', '四次挥手'], data: 'TCP 通过校验和、确认应答序列号、超时重传保证可靠性。三次握手是：开始-ok/开始-ok。四次挥手是：结束-ok-结束-ok。之所以挥手需要多一次是因为服务端给客户端传输的数据可能还没结束，因此不能像握手一样同时说“ok/结束”'},
   { id: 'HTTP', neighbors: ['状态码', '头', '方法', 'HTTPS', 'HTTP2'] },
   { id: '状态码', neighbors: ['重定向', '成功', '客户端失败', '服务端失败'] },
   { id: '重定向', neighbors: ['301', '302'], data: '301 永久、302 临时' },
