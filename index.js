@@ -35,7 +35,7 @@ const kg = [
   { id: 'generator', neighbors: ['yield', 'next'] },
   { id: 'this', neighbors: ['bind', 'apply', 'call', '实例'] },
   { id: '类型', neighbors: ['基本类型', '引用类型', '类数组', '隐式转换'] },
-  { id: '隐式转换', neighbors: ['valueOf', 'toString'] },
+  { id: '隐式转换', neighbors: ['valueOf', 'toString'], data: '== 时候会进行隐式转换，' },
   { id: '类数组', neighbors: ['arguments', 'NodeList', 'length', 'Array.from'] },
   { id: '作用域', neighbors: ['全局作用域', '函数作用域', '块级作用域'] },
   { id: '函数作用域', neighbors: ['闭包',] },
