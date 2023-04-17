@@ -237,8 +237,18 @@ window.onload = () => {
     const ui = Viva.Graph.svg('g').attr('class', 'node-g'),
       circle = Viva.Graph.svg('circle').attr('r', 5).attr('fill', '#00a2e8'),
       svgText = Viva.Graph.svg('text').attr('y', '-8px').attr('x', '-6px').text(node.id);
+    
+    const highlightNode = function(nodeId, isOn){
+      var nodeUI = graphics.getNodeUI(nodeId);
+        if (nodeUI) {
+          // nodeUI is a UI object created by graphics below
+          nodeUI.firstChild.attr('fill', isOn ? 'red' : '#00a2e8');
+          nodeUI.lastChild.attr('fill', isOn ? 'red' : 'black');
+        }
+    }
 
     const highlightRelatedNodes = function (nodeId, isOn) {
+      highlightNode(nodeId, isOn);
       // just enumerate all realted nodes and update link color:
       graph.forEachLinkedNode(nodeId, function (node, link) {
         var linkUI = graphics.getLinkUI(link.id);
@@ -246,12 +256,7 @@ window.onload = () => {
           // linkUI is a UI object created by graphics below
           linkUI.attr('stroke', isOn ? 'red' : 'gray');
         }
-        var nodeUI = graphics.getNodeUI(node.id);
-        if (nodeUI) {
-          // nodeUI is a UI object created by graphics below
-          nodeUI.firstChild.attr('fill', isOn ? 'red' : '#00a2e8');
-          nodeUI.lastChild.attr('fill', isOn ? 'red' : 'black');
-        }
+        highlightNode(node.id, isOn)
       });
     };
     ui.addEventListener('mouseover', function () { // mouse over
