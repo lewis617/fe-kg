@@ -57,6 +57,10 @@ const kg = [
   { id: '受控组件', neighbors: ['defaultValue'], },
   { id: 'babel', neighbors: ['AST'], },
   { id: 'AST', neighbors: ['树'], },
+  { id: 'Redux', neighbors: ['store', 'action', 'reducer', 'middleware', '发布订阅', 'react-redux'], },
+  { id: 'middleware', neighbors: ['compose'], data: 'middleware 是通过 compose 串联的，compose 就像是管道，action 作为参数在 compose 的管道里不断被加工' },
+  { id: 'react-redux', neighbors: ['context', 'connect'], data: '用 context 传递 store 和 subscription，store 变化时候 subscription 被调用，更新 state，并将 state 传递给子组件。' },
+  { id: 'connect', neighbors: ['hoc'], },
 
   { id: 'CSS', neighbors: ['CSS 基础', 'CSS 应用', 'CSS 性能优化'] },
   { id: 'CSS 基础', neighbors: ['BFC', '盒模型', 'CSS3', 'CSS 预处理器', 'CSS 引入', '兼容性', '响应式',] },
