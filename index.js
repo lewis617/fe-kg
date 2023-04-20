@@ -6,7 +6,7 @@ const kg = [
 
   { id: 'HTML', neighbors: ['doctype', '块级元素', '行内元素', '空元素', 'HTML5'] },
   { id: '行内元素', neighbors: ['a'] },
-  { id: 'HTML5', neighbors: ['canvas', 'audio', 'video', '语义化', '表单控件', 'web worker', '拖拽'] },
+  { id: 'HTML5', neighbors: ['canvas', 'audio', 'video', '语义化', '表单控件', 'web worker', '拖拽', 'history'] },
   { id: 'a', neighbors: ['_blank', '_self', '_parent', '_top'] },
 
   { id: 'JS 基础', neighbors: ['声明', '继承', '异步', '类型', '作用域', '精度', '优先级'] },
@@ -46,7 +46,9 @@ const kg = [
 
   { id: 'JS 框架', neighbors: ['React', 'Redux', 'babel', 'webpack'] },
   { id: 'webpack', neighbors: ['loader', 'plugin', '构建优化'] },
-  { id: 'React', neighbors: ['DIFF', '虚拟 DOM', 'React16', '表单', '组件通信', 'React 优化'] },
+  { id: 'React', neighbors: ['DIFF', '虚拟 DOM', 'React16', '表单', '组件通信', 'React 优化', 'react-router'] },
+  { id: 'react-router', neighbors: ['browserHistory', 'hashHistory'], data: '推荐用browserHistory，原因：1、有现成的 HTML5 History API 修改浏览器历史，而非修改 hash。2、后端无法感知 hash。3、部分应用会丢弃 hash。' },
+  { id: 'react-router', neighbors: ['history'] },
   { id: 'React 优化', neighbors: ['SSR', '缓存', '懒加载'] },
   { id: '组件通信', neighbors: ['props', 'context', '发布订阅'] },
   { id: 'DIFF', neighbors: ['树', 'key', 'class'], data: '算法策略：1、树：同层比较。2、层：通过 key 减少增删。3、节点：同类比较。\n算法复杂度：n^3 降到 n。' },
