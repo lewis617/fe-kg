@@ -165,7 +165,7 @@ const kg = [
   { id: '缓存', neighbors: ['HTTP 缓存', 'service worker', '字典'] },
   { id: 'HTTP 缓存', neighbors: ['强缓存', '协商缓存'] },
   { id: 'defer', neighbors: [], data: 'DOM 加载完后才执行' },
-  { id: 'tree shaking', neighbors: ['ESM'], data: '只有 ESM 可以 tree shaking，因为 CJS 导出是一个大对象，而 ESM 可以独立导出' },
+  { id: 'tree shaking', neighbors: ['ESM'], data: '只有 ESM 可以 tree shaking，因为 CJS 的 require 是动态的，无法在实际运行前判断需要或者不需要某些模块' },
   { id: '选择器', data: '包括：通配符选择器、标签选择器、class 选择器、id 选择器、属性选择器、后代选择器、子选择器、一般兄弟选择器、紧邻兄弟选择器。\n优化：1、避免嵌套。2、避免通配符和属性选择器。3、避免id+class，多此一举' },
   { id: '重排', neighbors: ['CSS 重排', 'JS 重排'] },
   { id: 'CSS 重排', neighbors: ['transform', 'visibility', '动画'], data: 'transform 替代 top，visibility 替代 display，动画放到 absolute 或者 fixed 的元素上，可以减少重排' },
