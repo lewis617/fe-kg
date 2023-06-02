@@ -2,7 +2,7 @@ const kg = [
   { id: '前端', neighbors: ['语言', '端', '计算机科学', '性能'] },
   { id: '语言', neighbors: ['JS', 'CSS', 'HTML', 'TS'] },
   { id: '端', neighbors: ['浏览器', '服务器', '移动端'] },
-  { id: 'JS', neighbors: ['JS 基础', 'JS 框架', 'JS 性能优化'] },
+  { id: 'JS', neighbors: ['JS 基础', 'JS 框架', 'JS 性能优化', 'TypeScript'] },
 
   { id: 'TS', neighbors: ['泛型', 'TS 类型', 'namespace', '静态类型', 'declare', 'interface', 'getter/setter'] },
   { id: 'declare', neighbors: ['三方库'], data: '当使用第三方库时，我们需要引用它的声明文件，才能获得对应的代码补全、接口提示等功能。如果某个 NPM 包没有声明文件，可以 declare module xxx。如果某个全局变量没有声明，可以 declare var xxx' },
@@ -53,6 +53,8 @@ const kg = [
   { id: '隐式转换', neighbors: ['valueOf', 'toString'], data: '== 时候会进行隐式转换，加减乘除时候也会隐式转换，加变字符串，减乘除变数字' },
   { id: '类数组', neighbors: ['arguments', 'NodeList', 'length', 'Array.from'] },
   { id: '作用域', neighbors: ['全局作用域', '函数作用域', '块级作用域'] },
+  { id: '作用域链', neighbors: ['链表', '作用域'], data: '作用域链是 JS 查找变量的方式，JS 是沿着做作用域链来查找变量的' },
+  { id: '词法作用域', neighbors: [ '作用域', 'eval', 'with'], data: '定义表达式能被访问的区间，换言之，一个声明（定义变量、函数等）的词法作用域就是它被定义时所在的作用域。用 eval 或者 with 可以改变词法作用域' },
   { id: '函数作用域', neighbors: ['闭包',] },
   { id: '精度', neighbors: ['进制转换', 'BigInt'], data: '表现：0.1+0.2!==0.3 \n原因：小数在进制转换时候出现循环，丢失了精度。\n解法：变成整数相加再除回去' },
   { id: '优先级', neighbors: [], data: '属性赋值最高，连等操作，从右往左' },
@@ -87,6 +89,10 @@ const kg = [
   { id: 'react-redux', neighbors: ['context', 'connect'], data: '用 context 传递 store 和 subscription，store 变化时候 subscription 被调用，更新 state，并将 state 传递给子组件。' },
   { id: 'connect', neighbors: ['hoc'], },
   { id: 'redux-thunk', neighbors: ['副作用'], data: '原始 redux 的 dispatch 只支持传递 plain object，该中间件使 dispatch 支持传递带 dispatch 等参数的函数，来方便延迟执行 dispatch，进而支持副作用（异步）。' },
+
+  { id: 'TypeScript', neighbors: ['interface', 'type', '工具类型'] },
+  { id: 'interface', neighbors: ['extends'] },
+  { id: '工具类型', neighbors: ['Partial', 'Required', 'Readonly', 'Pick', 'Omit', 'Extract', 'Exclude'] },
 
   { id: 'CSS', neighbors: ['CSS 基础', 'CSS 应用', 'CSS 性能优化'] },
   { id: 'CSS 基础', neighbors: ['BFC', '盒模型', 'CSS3', 'CSS 预处理器', 'CSS 引入', '兼容性', '响应式',] },
