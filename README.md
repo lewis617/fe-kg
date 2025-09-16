@@ -1,4 +1,4 @@
 # fe-kg
 Front end knowledge graph
 
-<https://www.liuyiqi.cn/fe-kg/>
+<https://lewis617.github.io/fe-kg/>
